@@ -1,7 +1,7 @@
 # SQL_Mastery
 
 
-
+It's the collection of Min Thant's SQL Mastery.
 
 
 
