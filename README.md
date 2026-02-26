@@ -1,7 +1,7 @@
 # SQL_Mastery
 
 
-It's the collection of Min Thant's SQL Mastery.
+It's the collection of Min Thant's Mastery in SQL (Structured Query Language).
 
 
 
