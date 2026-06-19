@@ -47,4 +47,58 @@ Tip: Smart data leaders choose architecture first, vendor second.
 
 Reference: https://www.linkedin.com/posts/sumonigupta_the-best-data-platforms-do-not-just-store-share-7473658578394980353-v-bw/?utm_source=share&utm_medium=member_ios&rcm=ACoAAEHaP0wBZjsxWiHJdp633ueaDnLC6BAbmtU
 
+# The Hidden Architecture Behind Snowflake, BigQuery, Redshift, & Databricks
+
+When setting up infrastructure for extensive data pipelines, interactive Looker Studio dashboards, or serving data to downstream machine learning models, understanding the underlying architecture of your data platform is crucial. Below is a detailed comparison of four leading data warehouse and lakehouse platforms, based on their core structural differences.
+
+## 1. Snowflake: Fully Decoupled Architecture
+Snowflake's primary differentiator is the complete separation of storage and compute. 
+* **Core Concept:** Virtual warehouses spin up independently, cache results, and never compete for the same resources.
+* **Execution Flow:**
+  1. **Query Input:** SQL query is submitted.
+  2. **Optimizer:** Generates the query plan.
+  3. **Compute:** Virtual Warehouses execute the compute tasks in total isolation.
+  4. **Storage:** Reads from Micro-Partitions.
+  5. **Caching:** Leverages a Result Cache to quickly return recurring queries.
+
+## 2. BigQuery: Serverless MPP Engine
+BigQuery abstracts away cluster management entirely, relying on a massive serverless infrastructure.
+* **Core Concept:** No clusters to manage. It uses the Dremel engine to break queries into a tree of workers reading columnar data from Colossus via the Jupiter network.
+* **Execution Flow (Dremel Execution Tree):**
+  1. **Query Input:** SQL query is submitted.
+  2. **Root Server (Dremel):** Receives the query and creates the execution tree.
+  3. **Mixers (Intermediate):** Distribute and aggregate intermediate results.
+  4. **Leaf Nodes:** Read data directly from Colossus storage via the Jupiter network.
+  5. **Auto-scaling:** Slots automatically scale based on the query demands without manual configuration.
+
+## 3. Redshift: Traditional MPP Columnar Warehouse
+Redshift utilizes a more traditional Massively Parallel Processing (MPP) architecture where nodes share the workload.
+* **Core Concept:** A leader node parses and distributes work across compute nodes. Each compute node owns specific slices of data stored on local disks.
+* **Execution Flow:**
+  1. **Client Request:** Submitted via JDBC/ODBC.
+  2. **Leader Node:** Parses the query, compiles the execution plan, and distributes it.
+  3. **Compute Nodes:** Execute the plan on their respective data slices (governed by distribution and sort keys).
+  4. **Aggregation:** The leader node merges the aggregated results and returns them to the client.
+
+## 4. Databricks: The Lakehouse Platform
+Databricks merges data warehouse reliability with data lake flexibility, built primarily around Apache Spark and Delta Lake.
+* **Core Concept:** A Lakehouse architecture governed by Unity Catalog, accelerated by the C++ Photon engine, and supporting ACID transactions via Delta Lake.
+* **Execution Flow:**
+  1. **Input:** Triggered via Notebook, SQL, or API.
+  2. **Access Control:** Unity Catalog performs ACL checks (denying access if unauthorized).
+  3. **Optimizer:** Adaptive Query Execution (AQE) and cost-based optimization rewrite the query.
+  4. **Execution Engine:** Uses the C++ Vectorized Photon engine or falls back to the Spark JVM engine.
+  5. **Data Layer:** Worker nodes interact with Delta Lake, which provides ACID compliance and time travel capabilities (reading previous Delta versions).
+
+---
+
+## Architectural Comparison Summary
+
+| Feature | Snowflake | BigQuery | Redshift | Databricks |
+| :--- | :--- | :--- | :--- | :--- |
+| **Paradigm** | Decoupled Storage & Compute | Serverless Data Warehouse | MPP Columnar Warehouse | Lakehouse Platform |
+| **Compute Model** | Isolated Virtual Warehouses | Auto-scaling Slots (Serverless) | Dedicated Compute Nodes | Photon Engine / Spark JVM |
+| **Storage Interaction**| Micro-Partitions | Colossus via Jupiter Network | Local Disk Slices | Delta Lake (ACID + Time Travel) |
+| **Key Differentiator** | No resource contention due to isolation | Zero infrastructure management | High performance for tuned schemas | Unifies data lake and warehouse |
+
 ##########################
