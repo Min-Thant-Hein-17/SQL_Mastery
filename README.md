@@ -45,6 +45,8 @@ There is no single winner. The right platform depends on your team, workloads, b
 
 Tip: Smart data leaders choose architecture first, vendor second.
 
+<img width="800" height="1000" alt="image" src="https://github.com/user-attachments/assets/594f5061-1251-4f10-98f9-06aaceb0ac42" />
+
 Reference: https://www.linkedin.com/posts/sumonigupta_the-best-data-platforms-do-not-just-store-share-7473658578394980353-v-bw/?utm_source=share&utm_medium=member_ios&rcm=ACoAAEHaP0wBZjsxWiHJdp633ueaDnLC6BAbmtU
 
 # The Hidden Architecture Behind Snowflake, BigQuery, Redshift, & Databricks
@@ -106,3 +108,4 @@ Databricks merges data warehouse reliability with data lake flexibility, built p
 <img width="800" height="1000" alt="image" src="https://github.com/user-attachments/assets/594f5061-1251-4f10-98f9-06aaceb0ac42" />
 
 
+#################################
