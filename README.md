@@ -45,4 +45,6 @@ There is no single winner. The right platform depends on your team, workloads, b
 
 Tip: Smart data leaders choose architecture first, vendor second.
 
+Reference: https://www.linkedin.com/posts/sumonigupta_the-best-data-platforms-do-not-just-store-share-7473658578394980353-v-bw/?utm_source=share&utm_medium=member_ios&rcm=ACoAAEHaP0wBZjsxWiHJdp633ueaDnLC6BAbmtU
+
 ##########################
