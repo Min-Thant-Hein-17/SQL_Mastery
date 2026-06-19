@@ -102,3 +102,29 @@ Databricks merges data warehouse reliability with data lake flexibility, built p
 | **Key Differentiator** | No resource contention due to isolation | Zero infrastructure management | High performance for tuned schemas | Unifies data lake and warehouse |
 
 ##########################
+
+graph TD
+    Q[Query SQL Input] --> RS[Root Server<br>Dremel]
+    RS --> M1[Mixer 1<br>intermediate]
+    RS --> M2[Mixer 2<br>intermediate]
+    RS --> M3[Mixer 3<br>intermediate]
+    M1 --> L1[Leaf] & L2[Leaf]
+    M2 --> L3[Leaf]
+    M3 --> L4[Leaf]
+    L1 & L2 & L3 & L4 -.->|Colossus read| COL[(Colossus Storage)]
+    L1 & L2 & L3 & L4 -.->|Aggregate Up| RA[Result Aggregated]
+    
+    style Q fill:#ffe6e6,stroke:#d0021b,stroke-width:2px
+    style RS fill:#ffe6e6,stroke:#d0021b,stroke-width:2px
+    style M1 fill:#ffe6e6,stroke:#d0021b,stroke-width:2px
+    style M2 fill:#ffe6e6,stroke:#d0021b,stroke-width:2px
+    style M3 fill:#ffe6e6,stroke:#d0021b,stroke-width:2px
+    style L1 fill:#ffcccc,stroke:#d0021b,stroke-width:2px
+    style L2 fill:#ffcccc,stroke:#d0021b,stroke-width:2px
+    style L3 fill:#ffcccc,stroke:#d0021b,stroke-width:2px
+    style L4 fill:#ffcccc,stroke:#d0021b,stroke-width:2px
+    style RA fill:#ff9999,stroke:#d0021b,stroke-width:2px
+    style COL fill:#f9f9f9,stroke:#d0021b,stroke-width:2px,stroke-dasharray: 5 5
+
+
+
