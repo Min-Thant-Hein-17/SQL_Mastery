@@ -109,3 +109,19 @@ Databricks merges data warehouse reliability with data lake flexibility, built p
 
 
 #################################
+
+# SQL Guide: 3 Levels of SQL Instagram Video: https://www.instagram.com/reel/DaN8hVZOiZf/
+
+Level 1: Beginner > basic to answer basic questions 
+
+Select, From, Where, Inner Joins, Outer Joins (left join, right join), string manipulation, date manipulation
+
+Level 2: Intermediate > Able to answer complex codes using:
+
+Outer joins, group by, having, CTEs, window functions, pivots, unpivots
+
+Level 3: Pro > "Genius"
+
+Dealing with stakeholders, business understanding, data modeling, data shapes, human readable codes, code comments, 
+
+####################
