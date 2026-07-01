@@ -128,7 +128,7 @@ Dealing with stakeholders, business understanding, data modeling, data shapes, h
 
 ####################
 
-SQL Practice Website: 
+SQL Practice Website: https://dataducky.com/
 
 Source: https://www.instagram.com/reel/DZc5eOujiZW/
 
