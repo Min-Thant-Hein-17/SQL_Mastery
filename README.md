@@ -110,7 +110,9 @@ Databricks merges data warehouse reliability with data lake flexibility, built p
 
 #################################
 
-# SQL Guide: 3 Levels of SQL Instagram Video: https://www.instagram.com/reel/DaN8hVZOiZf/
+# SQL Guide: 3 Levels of SQL Instagram Video: 
+
+https://www.instagram.com/reel/DaN8hVZOiZf/
 
 Level 1: Beginner > basic to answer basic questions 
 
