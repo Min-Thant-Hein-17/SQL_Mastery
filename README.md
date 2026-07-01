@@ -127,3 +127,11 @@ Level 3: Pro > "Genius"
 Dealing with stakeholders, business understanding, data modeling, data shapes, human readable codes, code comments, 
 
 ####################
+
+SQL Practice Website: 
+
+Source: https://www.instagram.com/reel/DZc5eOujiZW/
+
+####################
+
+
