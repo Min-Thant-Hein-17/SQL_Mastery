@@ -29,5 +29,5 @@ WHERE CustomerLastName like 'J%'
 
  
 
-Submission - Submit your document including result screenshots and  written answers. DBC-e06-MySQL-Art-Course-Database-Insert-Data.sqlDownload DBC-e06-MySQL-Art-Course-Database-Insert-Data.sqlDBC-e06-MySQL-Art-Course-Database-Create-Tables.sql
+Submission - Submit your document including result screenshots and  written answers. DBC-e06-MySQL-Art-Course-Database-Insert-Data.sqlDownload & DBC-e06-MySQL-Art-Course-Database-Insert-Data.sqlDBC-e06-MySQL-Art-Course-Database-Create-Tables.sql
 
