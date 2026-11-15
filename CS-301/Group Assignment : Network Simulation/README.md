@@ -1,5 +1,9 @@
-Group Assignment : Network Simulation
+# Group Assignment : Network Simulation
 
+For this assignment, I was inside Group 2, and I had to create the network topology, by using CISCO packet tracer! During the class, professor mainly used CLI for implementation and connection between routers, switches, and other devices! However, during our group discussion meetings, we agreed to watch a Youtube tutorial video from module 2, "packet tracer simulation", https://www.youtube.com/watch?v=rZw_b0wpQ00 , and completed our group assignment project work! 
+
+
+# Assignment Instructions:
 
 Dear All,
 
