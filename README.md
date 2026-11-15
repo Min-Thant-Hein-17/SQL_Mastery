@@ -13,7 +13,7 @@ It's the collection of Min Thant's Mastery in SQL (Structured Query Language).
 
 #############################
 
-#MYSQL VS PSQL
+# MYSQL VS PSQL
 
 Source: https://www.fivetran.com/blog/postgresql-vs-mysql
 
