@@ -13,6 +13,12 @@ It's the collection of Min Thant's Mastery in SQL (Structured Query Language).
 
 #############################
 
+#MYSQL VS PSQL
+
+Source: https://www.fivetran.com/blog/postgresql-vs-mysql
+
+#######################
+
 # Difference usages between Snowflake, BigQuery, Redshift, and Databricks
 
 Snowflake, BigQuery, Redshift, and Databricks may look similar from the outside, but under the hood they solve performance, scale, and concurrency in very different ways.
